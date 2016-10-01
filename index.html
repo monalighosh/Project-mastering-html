@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title>FantasyLeague.com</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  
+  <body>
+    <!-- SVG element -->
+    <svg id="svgRect" width="600" height="100" style="border: 1px dotted #000">
+        <!-- SVG rectangle gradient-->
+        <defs>
+        	<linearGradient id="rectGradient" x1="0%" y1="" x2="0%" y2="100%">
+        		<stop offset="0%" stop-color="orange" />
+                <stop offset="100%" stop-color="green" />
+        	</linearGradient>
+        </defs>
+        <!-- SVG rectangle -->
+    	<rect x="50" y="10" rx="10" ry="10" width="500" height="80" style="fill:url(#rectGradient)"/>
+    	<!-- SVG rectangle text -->
+    	<text font-size="25px" font-family="arial" fill="#fff" x="200" y="58">FantasyLeague.com</text>
+    </svg>
+    
+    <header>
+      <h3>Welcome to FantasyLeague.com: New user registration portal</h3>
+    </header>
+    
+    <section>
+      <table>
+      	<thead>
+      		<th>League Type</th>
+      		<th>Cost</th>
+      		<th>Start Date</th>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td>Free league</td>
+      			<td>$0</td>
+      			<td>2/20/2016</td>
+      		</tr>
+
+      		<tr>
+      			<td>Pro league</td>
+      			<td>$200/season</td>
+      			<td>2/15/2016</td>
+      		</tr>
+
+      		<tr>
+      			<td>Weekly leagues</td>
+      			<td>$20/week</td>
+      			<td>3/1/2016</td>
+      		</tr>
+      	</tbody>
+      </table>
+    </section>
+
+    
+    <section>
+     <form id="registrationForm" method="POST" action="#">
+
+     <fieldset class="floatleft">
+     	<legend>Personal Info</legend>
+     	<label for="firstName">First Name:</label>
+     	<input type="text" name="firstName" id="firstName" autofocus required> 
+     	<br/><br/>
+
+     	<label for="lastName">Last Name:</label>
+     	<input type="text" name="lastName" id="lastName">
+     	<br/><br/>
+
+     	<label for="birthDate">Date of Birth:</label>
+     	<input type="date" name="birthDate" id="birthDate" required>
+     	<br/><br/>
+
+     	<label for="email">Email:</label>
+     	<input type="email" name="email" id="email" required>
+     	<br/><br/>
+
+     	<label for="tel">Phone:</label>
+     	<input type="tel" name="tel" id="tel" pattern="^[0]{1}[0-9]{4}-[0-9]{4}$" title="Your phone number should match the following format: 01234-5678">
+     </fieldset>
+
+     <fieldset class="floatright">
+     	<legend>Profile Info</legend>
+
+     	<label for="profilePic">Upload your profile picture:</label>
+     	<input type="file" name="profilePic" id="profilePic" accept="image/*">
+     	<br/><br/>
+
+     	<label for="username">Desired Username:</label>
+     	<input type="text" name="username" id="username">
+     	<br/><br/>
+
+     	<label for="password">Desired Password:</label>
+     	<input type="password" name="password" id="password">
+     	<br/><br/>
+
+     	<label>Choose League Type:</label>
+
+     	<input type="radio" name="leagueType" id="freeLeague" required>
+     	<label for="freeLeague">Free league</label>
+
+     	<input type="radio" name="leagueType" id="proLeague" required>
+     	<label for="proLeague">Pro league</label>
+
+     	<input type="radio" name="leagueType" id="weeklyLeague" required>
+     	<label for="weeklyLeague">Weekly leagues</label>
+     </fieldset>
+
+     <input type="submit" name="submit" id="submit" value="Submit">
+     	
+     </form>
+    </section>
+    
+    <footer>
+      <small>Fantasy League.com: 2016 All rights reserved</small>
+    </footer>
+
+  </body>
+</html>
